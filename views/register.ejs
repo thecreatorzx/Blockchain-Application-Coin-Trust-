@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="./style-login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <h1 class="opacity">SIGNUP</h1>
+                <form method="post" action="/register">
+                    <input type="text" placeholder="FIRST NAME" name="firstName"/>
+                    <input type="text" placeholder="LAST NAME" name="lastName"/>
+                    <input type="email" placeholder="ENTER YOUR EMAIL" name="username"/>
+                    <input type="password" placeholder="CREATE A PASSWORD" name="password"/>
+                    <input type="password" placeholder="CONFIRM YOUR A PASSWORD" name="cnfrmpassword"/>
+                    <button class="opacity" type="submit">SUBMIT</button>
+                </form>
+                <div><p>already have an account?</p>
+                    <a href="login">LOGIN</a>
+                </div>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
