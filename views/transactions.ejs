@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>transaction</title>
+  <link rel="stylesheet" href="./style-login.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <h1 class="opacity">Complete your secured transaction</h1>
+                <form action="transactions" method="post">
+                    <input type="email" id="senderid" placeholder="SENDER'S USERNAME" name="ud1"/>
+                    <input type="text" id="sendername" placeholder="SENDER'S NAME" name="sendername"/>
+                    <input type="email" id="recepientid" placeholder="RECEPIENT'S USERNAME" name="ud2"/>
+                    <input type="text" id="recepientname" placeholder="RECEPIENT'S NAME" name="recepientname"/>
+                    <input type="date" id="date" placeholder="DATE" name="date"/>
+                    <input type="text" id="amount" placeholder="AMOUNT" name="amount"/>
+                    <button class="opacity" type="submit">TRANSACT</button>
+                </form>
+                
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+</body>
+<!-- partial -->
+  <script defer src="./script.js"></script>
+
+</body>
+</html>

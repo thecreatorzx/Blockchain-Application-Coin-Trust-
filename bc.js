@@ -1,4 +1,6 @@
 const SHA256 = require("crypto-js/sha256");
+// const senderId = document.getElementById("senderid");
+// const recepientId = document.getElementById("recepientid");
 
 class CryptoBlock {
     constructor(index, timestamp, data, prevHash = " "){
@@ -34,7 +36,7 @@ class CryptoBlockchain {
         this.difficulty = 4;
     }
     startGenesisBlock() {
-        return new CryptoBlock(0,"08/01/2024","intial block of the chain", "0");
+        return new CryptoBlock(0,"17/01/2024","intial block of the chain", "0");
     }
     obtainLatestBlock() {
         return this.blockchain[this.blockchain.length-1];
@@ -61,21 +63,16 @@ class CryptoBlockchain {
     }
 }
 
-let obj = new CryptoBlockchain();
-console.log("the blockchain mining in process");
-obj.addNewBlock(
-    new CryptoBlock(1,"08/01/2024",{
-        sender : "krishan jha",
-        recepient : "shivam mishra",
-        amount : 200,
-    })
-);
-obj.addNewBlock(
-    new CryptoBlock(1,"08/01/2024",{
-        sender : "krishan jha",
-        recepient : "shivam mishra",
-        amount : 100
-    })
-);
 
-console.log(JSON.stringify(obj, null , 4));
+// obj.invoke();
+// console.log("the blockchain mining in process");
+//  obj.addNewBlock(
+//     new CryptoBlock(1,"17/01/2024",{
+//         sender : `krishan`,
+//         recepient : `shivam`,
+//         amount : 200,
+//     })
+// )
+// exports.crypto = new CryptoBlockchain();
+
+// console.log(JSON.stringify(obj, null , 4));

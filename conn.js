@@ -20,4 +20,15 @@ const userSchema = new mongoose.Schema({
     cnfrmpassword: String,
 })
 
+const userWallet = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    firstName: String ,
+    balance: String,
+})
+
 exports.User = mongoose.model("Client",userSchema);
+exports.UserWallet = mongoose.model("Wallet",userWallet);

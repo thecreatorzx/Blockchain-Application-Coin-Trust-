@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>my-wallet</title>
+  <link rel="stylesheet" href="./style-login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <h1 class="opacity">MY
+                    WALLET</h1>
+                <form method="post" action="mywalletopened">
+                   <h3>NAME : <%=name%>
+                   </h3>
+                   <h3>BALANCE : <%=balance%></h3><br>
+                    <button class="opacity" type="submit">MAKE A TRANSACTION</button>
+                </form>
+                <a href="/"><button class="home">HOME</button></a>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
