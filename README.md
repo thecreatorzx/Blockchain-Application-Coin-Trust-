@@ -1,2 +1,2 @@
-# Blockchain-database
-To implement a basic blockchain database for storing highly precious information like transactions.
+# Blockchain-Application(Coin-Trust)
+Implementing a Decentrallised and Secured Transaction Application backed by Blockchain Algorithms.
