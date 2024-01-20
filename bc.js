@@ -64,15 +64,22 @@ class CryptoBlockchain {
 }
 
 
-// obj.invoke();
-// console.log("the blockchain mining in process");
-//  obj.addNewBlock(
-//     new CryptoBlock(1,"17/01/2024",{
-//         sender : `krishan`,
-//         recepient : `shivam`,
-//         amount : 200,
-//     })
-// )
-// exports.crypto = new CryptoBlockchain();
+const obj = new CryptoBlockchain();
+console.log("the blockchain mining in process");
+ obj.addNewBlock(
+    new CryptoBlock(1,"17/01/2024",{
+        sender : `krishan`,
+        recepient : `shivam`,
+        amount : 200,
+    })
+)
+obj.addNewBlock(
+    new CryptoBlock(2,"17/01/2024",{
+        sender : `krishan`,
+        recepient : `shivam`,
+        amount : 100,
+    })
+)
+// exports.crypto = obj;
 
-// console.log(JSON.stringify(obj, null , 4));
+console.log(JSON.stringify(obj, null , 4));

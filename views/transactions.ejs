@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>transaction</title>
   <link rel="stylesheet" href="./style-login.css">
+  <script defer src="https://kit.fontawesome.com/c9fac3fcec.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -20,13 +21,36 @@
                     <input type="text" id="recepientname" placeholder="RECEPIENT'S NAME" name="recepientname"/>
                     <input type="date" id="date" placeholder="DATE" name="date"/>
                     <input type="text" id="amount" placeholder="AMOUNT" name="amount"/>
+                    <input type="password" id="pin" placeholder="ENTER YOUR PIN" name="pin"/>
                     <button class="opacity" type="submit">TRANSACT</button>
                 </form>
-                
+                <a href="/"><button class="opacity">HOME</button></a>
             </div>
             <div class="circle circle-two"></div>
         </div>
         <div class="theme-btn-container"></div>
+
+        <% if(messages.error) { %>
+            <div id="toastbox" class="toast-error">
+              
+                <% messages.error.forEach(function(error) { %>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                  <h4><%= 
+                    error %></h4>
+                  <% }); %>
+              
+            </div>
+            <% } else if(messages.success) { %>
+              <div id="toastbox" class="toast-success">
+                
+                  <% messages.success.forEach(function(success) { %>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h4><%= success %></h4>
+                    <% }); %>
+                
+              </div>
+              <% } %>
+        
     </section>
 </body>
 <!-- partial -->

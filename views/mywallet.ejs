@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>my-wallet</title>
   <link rel="stylesheet" href="./style-login.css">
-
+  <script defer src="https://kit.fontawesome.com/c9fac3fcec.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -16,14 +16,38 @@
                 <h1 class="opacity">OPEN YOUR WALLET</h1>
                 <form method="post" action="mywallet">
                     <input type="email" placeholder="USERNAME" name="username"/>
-                    
+                    <input type="password" placeholder="PIN" name="pin"/>
                     <button class="opacity">OPEN</button>
                 </form>
-                
+                <p>! don'nt have wallet - create one !</p>
+                <a href="/vault"> <button class="opacity">VAULT</button></a><br><br>
+                <a href="/"> <button class="opacity">HOME</button></a>
             </div>
             <div class="circle circle-two"></div>
         </div>
         <div class="theme-btn-container"></div>
+
+        <% if(messages.error) { %>
+            <div id="toastbox" class="toast-error">
+              
+                <% messages.error.forEach(function(error) { %>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                  <h4><%= 
+                    error %></h4>
+                  <% }); %>
+              
+            </div>
+            <% } else if(messages.success) { %>
+              <div id="toastbox" class="toast-success">
+                
+                  <% messages.success.forEach(function(success) { %>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h4><%= success %></h4>
+                    <% }); %>
+                
+              </div>
+              <% } %>
+
     </section>
 </body>
 <!-- partial -->

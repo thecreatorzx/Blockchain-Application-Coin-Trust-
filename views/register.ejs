@@ -2,9 +2,9 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>signup</title>
   <link rel="stylesheet" href="./style-login.css">
-
+  <script defer src="https://kit.fontawesome.com/c9fac3fcec.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -29,6 +29,28 @@
             <div class="circle circle-two"></div>
         </div>
         <div class="theme-btn-container"></div>
+
+        <% if(messages.error) { %>
+            <div id="toastbox" class="toast-invalid">
+              
+                <% messages.error.forEach(function(error) { %>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                  <h4><%= 
+                    error %></h4>
+                  <% }); %>
+              
+            </div>
+            <% } else if(messages.success) { %>
+              <div id="toastbox" class="toast-success">
+                
+                  <% messages.success.forEach(function(success) { %>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h4><%= success %></h4>
+                    <% }); %>
+                
+              </div>
+              <% } %>
+
     </section>
 </body>
 <!-- partial -->

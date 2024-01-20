@@ -28,7 +28,19 @@ const userWallet = new mongoose.Schema({
     },
     firstName: String ,
     balance: String,
+    pin: String,
+})
+
+const userTransaction = new mongoose.Schema({
+    ud1 : String,
+    sendername: String,
+    ud2 : String,
+    recepientname: String,
+    date: String,
+    amount: String,
+    pin: String,
 })
 
 exports.User = mongoose.model("Client",userSchema);
 exports.UserWallet = mongoose.model("Wallet",userWallet);
+exports.UserTransaction = mongoose.model("Transaction",userTransaction);
