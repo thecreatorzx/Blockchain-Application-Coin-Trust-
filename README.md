@@ -40,19 +40,18 @@ To install Coin Trust, follow these steps:
 Clone the Coin Trust repository from GitHub:
 bash
 Copy code
-git clone https://github.com/cointrust/coin-trust.git
+git clone https://github.com/jhakrishan20/Blockchain-Application-Coin-Trust-.git
 Install dependencies using npm:
 bash
 Copy code
-cd coin-trust
 npm install
-Configure the blockchain network settings and smart contracts according to your requirements.
 
 Run the application:
 
 bash
 Copy code
-npm start
+npm run dev   or   node server.js  
+
 Contributing
 Contributions to Coin Trust are welcome! If you would like to contribute to the development of Coin Trust, please fork the repository, make your changes, and submit a pull request.
 
