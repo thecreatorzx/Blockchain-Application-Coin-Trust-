@@ -3,7 +3,7 @@ const expressSession = require("express-session");
 const { connectMongoose , User } = require("./conn.js");
 const { UserWallet } = require("./conn.js");
 const { UserTransaction } = require("./conn.js");
-const { crypto } = require("./bc.js");
+const {CryptoBlockchain , CryptoBlock} = require("./bc.js")
 const SHA256 = require("crypto-js/sha256");
 const flash = require("express-flash");
 const app = express();
@@ -161,31 +161,31 @@ app.post("/mywalletopened",(req,res)=>{
 
 app.post("/transactions",async (req,res)=>{
 
-    const newTransact = await UserTransaction.create(req.body);
-    // const obj = await new CryptoBlockchain();
-    // await crypto.addNewBlock(1,`${req.body.date}`,{
-    //             sender : `${req.body.sendername}`,
-    //             recepient : `${req.body.recepientname}`,
-    //             amount : req.body.amount,
-    //         })
-    //         // console.log(crypto);
-
             //credit and debit in the user's wallets
             const user1 = await UserWallet.findOne({username : req.body.ud1});  
             const user2 = await UserWallet.findOne({username : req.body.ud2});   
     
             if(user1!=null && user2!=null){
                 if(user1.pin == req.body.pin){
+
+                    const obj = await new CryptoBlockchain();
+                    await obj.addNewBlock( new CryptoBlock(`${req.body.date}`,{
+                        sender : `${req.body.sendername}`,
+                        recepient : `${req.body.recepientname}`,
+                        amount : req.body.amount,
+                       }));
                     user1.balance =  parseFloat(user1.balance) - parseFloat(req.body.amount);
-            await user1.save();
-            user2.balance =  parseFloat(user2.balance) + parseFloat(req.body.amount);
-            await user2.save();
-            req.flash("success",`Transaction to ${user2.firstName} completed`);
-            res.redirect("/transactions");
+                    await user1.save();
+                    user2.balance =  parseFloat(user2.balance) + parseFloat(req.body.amount);
+                    await user2.save();
+                    // const newTransact = await UserTransaction.create(req.body);
+                    req.flash("success",`Transaction to ${user2.firstName} completed`);
+                    res.redirect("/transactions");
+                    // console.log(obj.blockchain);
                 }
                 else{
                     req.flash("error",`Wrong PIN entered`);
-            res.redirect("/transactions");
+                    res.redirect("/transactions");
                 }
             }
             else{
@@ -195,6 +195,23 @@ app.post("/transactions",async (req,res)=>{
 
 })
 
+// const obj = new CryptoBlockchain();
+// console.log("the blockchain mining in process");
+//  obj.addNewBlock(
+//     new CryptoBlock("17/01/2024",{
+//         sender : `krishan`,
+//         recepient : `shivam`,
+//         amount : 200,
+//     })
+// )
+// obj.addNewBlock(
+//     new CryptoBlock("17/01/2024",{
+//         sender : `krishan`,
+//         recepient : `shivam`,
+//         amount : 100,
+//     })
+// )
+// console.log(obj.blockchain);
 
 app.listen(4000 ,()=>{
     console.log("listneing on http://localhost:4000");

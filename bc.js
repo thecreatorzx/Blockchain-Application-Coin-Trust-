@@ -3,8 +3,8 @@ const SHA256 = require("crypto-js/sha256");
 // const recepientId = document.getElementById("recepientid");
 
 class CryptoBlock {
-    constructor(index, timestamp, data, prevHash = " "){
-        this.index = index; // assign the value of index to index key and value as the input in the empty obj{}
+    constructor( timestamp, data, prevHash = " "){
+        // this.index = index; // assign the value of index to index key and value as the input in the empty obj{}
         this.timestamp = timestamp;
         this.data = data;
         this.previousHash = prevHash;
@@ -14,7 +14,7 @@ class CryptoBlock {
 
     createHash() { // returns created hash of the given data
         return SHA256 (
-            this.index + this.prevHash + this.timestamp + JSON.stringify(this.data) + this.nonce 
+              this.prevHash + this.timestamp + JSON.stringify(this.data) + this.nonce 
         ).toString();
     }
 
@@ -36,7 +36,7 @@ class CryptoBlockchain {
         this.difficulty = 4;
     }
     startGenesisBlock() {
-        return new CryptoBlock(0,"17/01/2024","intial block of the chain", "0");
+        return new CryptoBlock("17/01/2024","intial block of the chain", "0");
     }
     obtainLatestBlock() {
         return this.blockchain[this.blockchain.length-1];
@@ -64,22 +64,22 @@ class CryptoBlockchain {
 }
 
 
-const obj = new CryptoBlockchain();
-console.log("the blockchain mining in process");
- obj.addNewBlock(
-    new CryptoBlock(1,"17/01/2024",{
-        sender : `krishan`,
-        recepient : `shivam`,
-        amount : 200,
-    })
-)
-obj.addNewBlock(
-    new CryptoBlock(2,"17/01/2024",{
-        sender : `krishan`,
-        recepient : `shivam`,
-        amount : 100,
-    })
-)
-// exports.crypto = obj;
+// const obj = new CryptoBlockchain();
+// // console.log("the blockchain mining in process");
+//  obj.addNewBlock(
+//     new CryptoBlock("17/01/2024",{
+//         sender : `krishan`,
+//         recepient : `shivam`,
+//         amount : 200,
+//     })
+// )
+// obj.addNewBlock(
+//     new CryptoBlock("17/01/2024",{
+//         sender : `krishan`,
+//         recepient : `shivam`,
+//         amount : 100,
+//     })
+// )
+module.exports = { CryptoBlockchain , CryptoBlock };
 
-console.log(JSON.stringify(obj, null , 4));
+// console.log(JSON.stringify(obj, null , 4));
