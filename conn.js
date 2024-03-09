@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const privkey = require('./test');
 
 exports.connectMongoose = async ()=>{
     await mongoose.connect("mongodb://127.0.0.1:27017/crypto-network").then(() => {
@@ -26,6 +27,10 @@ const userWallet = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    privatekey : {
+        type: String,
+        default: privkey // You can use the variable here
+      },
     firstName: String ,
     balance: String,
     pin: String,

@@ -5,6 +5,7 @@ const { UserWallet } = require("./conn.js");
 const { UserTransaction } = require("./conn.js");
 const {CryptoBlockchain , CryptoBlock} = require("./bc.js")
 const SHA256 = require("crypto-js/sha256");
+const crypto = require('crypto');
 const flash = require("express-flash");
 const app = express();
 
@@ -123,7 +124,7 @@ app.post("/vault",async (req,res)=>{
     const userRepeat = await UserWallet.findOne({username : user});  
     if(userRegister!=null){
         if(userRepeat==null){
-            const newWalltet = await UserWallet.create(req.body);
+              const newWalltet = await UserWallet.create(req.body);
         req.flash("success",`Wallet created successfully`);
         res.redirect("/vault");
         }
@@ -213,6 +214,6 @@ app.post("/transactions",async (req,res)=>{
 // )
 // console.log(obj.blockchain);
 
-app.listen(4000 ,()=>{
-    console.log("listneing on http://localhost:4000");
+app.listen(4500 ,()=>{
+    console.log("listneing on http://localhost:4500");
 });
