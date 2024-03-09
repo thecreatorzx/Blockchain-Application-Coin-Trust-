@@ -41,7 +41,9 @@ h1 {
     align-items: center;
     height: 100vh;
 }
-
+.createWallet{
+    color: rgb(169, 194, 238);
+}
 .login-container {
     position: relative;
     width: 22.2rem;
@@ -200,6 +202,7 @@ h1 {
 }
 .opacity {
     opacity: 0.6;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .theme-btn-container {
