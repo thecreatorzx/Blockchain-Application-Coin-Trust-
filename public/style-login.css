@@ -35,6 +35,15 @@ h1 {
     font-size: 2.5rem;
 }
 
+.navbar-brand span ,.bit{
+    font-weight: bold;
+    font-size: 3rem;
+    color: #078aae;
+    text-shadow: 3px 3px 2px black;
+  }
+  .navbar-brand span i, .bit i{
+    color: orange;
+  }
 .container {
     display: flex;
     justify-content: center;
@@ -47,6 +56,9 @@ h1 {
 .login-container {
     position: relative;
     width: 22.2rem;
+}
+.transact {
+    height: 80vh;
 }
 .form-container {
     border: 1px solid hsla(0, 0%, 65%, 0.158);
@@ -120,7 +132,17 @@ h1 {
     -ms-transform: scale(1.02);
     -o-transform: scale(1.02);
 }
-
+.transact .form-container{
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    z-index: 99;
+    padding: 1.5rem;
+}
+.transact form input {
+    margin: 1rem 0;
+}
 .abc {
     background-color: var(--primary-color);
     color: var(--color);

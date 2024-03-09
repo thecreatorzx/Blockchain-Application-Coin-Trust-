@@ -10,10 +10,13 @@
 <!-- partial:index.partial.html -->
 <body>
     <section class="container">
-        <div class="login-container">
+        <div class="login-container transact">
             <div class="circle circle-one"></div>
             <div class="form-container">
-                <h1 class="opacity">Complete your secured transaction</h1>
+                <h1 class="opacity">
+                  <span class="bit">
+                   Bit<i>Pay</i>
+                  </span></h1>
                 <form action="transactions" method="post">
                     <input type="email" id="senderid" placeholder="SENDER'S USERNAME" name="ud1"/>
                     <input type="text" id="sendername" placeholder="SENDER'S NAME" name="sendername"/>
@@ -22,9 +25,9 @@
                     <input type="date" id="date" placeholder="DATE" name="date"/>
                     <input type="text" id="amount" placeholder="AMOUNT" name="amount"/>
                     <input type="password" id="pin" placeholder="ENTER YOUR PIN" name="pin"/>
-                    <button class="opacity" type="submit">TRANSACT</button>
+                    <button class="opacity transacts" type="submit">TRANSACT</button>
                 </form>
-                <a href="/"><button class="opacity">HOME</button></a>
+                <a href="/" class ="createWallet">Go Back</a>
             </div>
             <div class="circle circle-two"></div>
         </div>
