@@ -5,7 +5,9 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 .layout_padding {
   padding: 90px 0;
 }
@@ -143,10 +145,14 @@ a:focus {
   padding-left: 25px;
 }
 
-.navbar-brand span {
+.navbar-brand span ,.bit{
   font-weight: bold;
   font-size: 24px;
-  color: #ffffff;
+  color: #078aae;
+  text-shadow: 3px 3px 2px black;
+}
+.navbar-brand span i, .bit i{
+  color: orange;
 }
 
 .custom_nav-container {
@@ -182,7 +188,9 @@ a:focus {
   border: none;
   color: #ffffff;
 }
-
+.custom_nav-container .nav_search-btn i{
+  weight: 900;
+}
 .custom_nav-container .nav_search-btn:hover {
   color: #00bbf0;
 }
@@ -928,3 +936,7 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+/*  CSS by saad */
