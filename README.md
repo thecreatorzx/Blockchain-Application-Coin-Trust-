@@ -2,6 +2,8 @@
 
 BitPay is a decentralized transaction application built on blockchain technology. It provides a secure and transparent platform for users to conduct peer-to-peer transactions without the need for intermediaries. With BitPay, users can transfer digital assets securely and trustlessly, ensuring the integrity and immutability of their transactions.
 
+**View the site live at - [BitPay App](https://blockchain-application-bitpay.onrender.com/)**
+
 ## Features
 
 - Decentralized Transactions: BitPay enables users to conduct transactions directly with one another without relying on centralized authorities.
