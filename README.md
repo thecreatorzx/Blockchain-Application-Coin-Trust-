@@ -1,66 +1,58 @@
-<h1>Coin Trust: Decentralized Transaction Application</h1><br>
-Coin Trust is a decentralized transaction application built on blockchain technology. It provides a secure and transparent platform for users to conduct peer-to-peer transactions without the need for intermediaries. With Coin Trust, users can transfer digital assets securely and trustlessly, ensuring the integrity and immutability of their transactions.
+# BitPay: Decentralized Transaction Application
 
-Features
-Decentralized Transactions: Coin Trust enables users to conduct transactions directly with one another without relying on centralized authorities.
+BitPay is a decentralized transaction application built on blockchain technology. It provides a secure and transparent platform for users to conduct peer-to-peer transactions without the need for intermediaries. With BitPay, users can transfer digital assets securely and trustlessly, ensuring the integrity and immutability of their transactions.
 
-Blockchain Technology: Built on blockchain technology, Coin Trust ensures the security and immutability of transactions through distributed ledger technology.
+## Features
 
-Transparent and Auditable: All transactions on Coin Trust are transparent and auditable, allowing users to track the flow of assets on the blockchain.
+- Decentralized Transactions: BitPay enables users to conduct transactions directly with one another without relying on centralized authorities.
 
-Secure: With cryptographic algorithms and consensus mechanisms, Coin Trust provides a secure environment for users to transact without the risk of fraud or manipulation.
+- Blockchain Technology: Built on blockchain technology, BitPay ensures the security and immutability of transactions through distributed ledger technology.
 
-Wallet Integration: Users can manage their digital assets conveniently through wallet integration, providing easy access to funds for transactions.
+- Transparent and Auditable: All transactions on BitPay are transparent and auditable, allowing users to track the flow of assets on the blockchain.
 
-How It Works
-User Registration: Users can register on the Coin Trust platform by creating an account.
+- Secure: With cryptographic algorithms and consensus mechanisms, BitPay provides a secure environment for users to transact without the risk of fraud or manipulation.
 
-Asset Management: Users can manage their digital assets within their wallets, including cryptocurrencies and tokens supported by the Coin Trust platform.
+- Wallet Integration: Users can manage their digital assets conveniently through wallet integration, providing easy access to funds for transactions.
 
-Initiating Transactions: To initiate a transaction, users specify the recipient's email address, the amount to be transferred, and some basic additional transaction details.
+## How It Works
 
-Transaction Verification: Transactions are verified and confirmed by the blockchain network through consensus mechanisms, ensuring the validity and integrity of each transaction.
+- User Registration: Users can register on the BitPay platform by creating an account.
 
-Transaction Settlement: Once verified, transactions are recorded on the blockchain and settled, updating the balance of digital assets in the sender's and recipient's wallets accordingly.
+- Asset Management: Users can manage their digital assets within their wallets, including cryptocurrencies and tokens supported by the BitPay platform.
 
-Technology Stack
-Blockchain: Coin Trust utilizes a decentralized blockchain network for transaction processing and validation.
+- Initiating Transactions: To initiate a transaction, users specify the recipient's email address, the amount to be transferred, and some basic additional transaction details.
 
-Smart Contracts: Smart contracts are employed to automate and enforce transaction rules and agreements on the blockchain.
+- Transaction Verification: Transactions are verified and confirmed by the blockchain network through consensus mechanisms, ensuring the validity and integrity of each transaction.
 
-Cryptographic Algorithms: Cryptographic algorithm SHA-256 is used for secure key generation and transaction validation.
+- Transaction Settlement: Once verified, transactions are recorded on the blockchain and settled, updating the balance of digital assets in the sender's and recipient's wallets accordingly.
 
-Consensus Mechanisms: Consensus mechanism Proof of Work (PoW) ensure agreement among network participants on the validity of transactions.
+## Technology Stack
 
-Node.js: Node.js is used to create the server.
+- Blockchain: BitPay utilizes a decentralized blockchain network for transaction processing and validation.
 
-Installation
-To install Coin Trust, follow these steps:
+- Smart Contracts: Smart contracts are employed to automate and enforce transaction rules and agreements on the blockchain.
 
-Clone the Coin Trust repository from GitHub:
-bash
-Copy code
-git clone https://github.com/jhakrishan20/Blockchain-Application-Coin-Trust-.git
-Install dependencies using npm:
-bash
-Copy code
-npm install
+- Cryptographic Algorithms: Cryptographic algorithm SHA-256 is used for secure key generation and transaction validation.
 
-Run the application:
+- Consensus Mechanisms: Consensus mechanism Proof of Work (PoW) ensure agreement among network participants on the validity of transactions.
 
-bash
-Copy code
-npm run dev   or   node server.js  
+- Node.js: Node.js is used to create the server.
 
-Contributing
-Contributions to Coin Trust are welcome! If you would like to contribute to the development of Coin Trust, please fork the repository, make your changes, and submit a pull request.
+## Installation
 
-License
-Coin Trust is licensed under the MIT License.
+To install BitPay, follow these steps:
 
-Support
-For support or inquiries, please contact us at krishanjha80@gmail.com
+- Clone the BitPay repository from GitHub
+- To contribute remember to fork the repo before cloning.
+- Install dependencies using npm:
+- `npm install`
+- Run the application:
+- `npm run dev or node server.js`
 
+## Contributing
 
+Contributions to BitPay are welcome! If you would like to contribute to the development of BitPay, please fork the repository, make your changes, and submit a pull request.
 
+## Me
 
+Hey there! My name is Mohd Saad. I am an aspiring Web Developer and currently a Btech student. If you like this project then you can star this repo and if you want to work in a team on any project, contact me via mail or on my [LinkedIn](https://www.linkedin.com/in/webdevmsaad/) profile.
