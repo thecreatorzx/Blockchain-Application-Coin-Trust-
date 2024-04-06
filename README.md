@@ -51,7 +51,7 @@ To install BitPay, follow these steps:
 
 ## Contributing
 
-Contributions to BitPay are welcome! If you would like to contribute to the development of BitPay, please fork the repository, make your changes, and submit a pull request.
+This app was developed by Mohd Saad(me) and Krishan Kumar Jha. This project was part of our hackathon at NIT Kurukshetra. Contributions to BitPay are welcome! If you would like to contribute to the development of BitPay, please fork the repository, make your changes, and submit a pull request.
 
 ## Me
 
