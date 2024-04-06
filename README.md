@@ -47,7 +47,7 @@ To install BitPay, follow these steps:
 - Install dependencies using npm:
 - `npm install`
 - Run the application:
-- `npm run dev or node server.js`
+- `npm run dev` or `node server.js`
 
 ## Contributing
 
